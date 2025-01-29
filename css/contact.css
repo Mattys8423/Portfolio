@@ -3,6 +3,13 @@
     src: url('../font/PressStart2P.ttf') format('truetype');
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
 body {
     font-family: 'Press Start 2P', sans-serif;
     background-image: url('../Assets/cyber.gif');
@@ -303,6 +310,10 @@ header {
             .card:focus-within .content > *:not(.title) {
                 transition-duration: 0s;
             }
+}
+
+.containermain {
+    flex: 1;
 }
 
 footer {

@@ -7,6 +7,12 @@
     src: url('../font/PressStart2P.ttf') format('truetype');
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
 
 body {
     font-family: 'Press Start 2P', sans-serif;
@@ -175,6 +181,10 @@ header nav a.active {
 .btn-orange:hover {
     background-color: #e68900;
     cursor: pointer;
+}
+
+.containermain {
+    flex: 1;
 }
 
 footer {

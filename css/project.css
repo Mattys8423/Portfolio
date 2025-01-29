@@ -7,6 +7,13 @@
     src: url('../font/VT323-Regular.ttf') format('truetype');
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
 body {
     font-family: 'Press Start 2P', sans-serif;
     background-image: url('../Assets/cyber.gif');
@@ -123,7 +130,7 @@ h1 + p, p + p {
 
 .container {
     padding: 10px 200px;
-    margin-bottom: 80px;
+    margin-bottom: 245px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 30px;
@@ -261,6 +268,10 @@ h1 + p, p + p {
         outline: 1px dashed yellow;
         outline-offset: 3px;
     }
+
+.containermain {
+    flex: 1;
+}
 
 footer {
     background-color: #333;
