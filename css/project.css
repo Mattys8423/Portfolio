@@ -109,6 +109,11 @@ header {
         text-decoration: underline;
     }
 
+    .hero p {
+        font-size: 1.2em;
+        margin-bottom: 25px;
+    }
+
 p {
     line-height: 1.5em;
 }
@@ -124,7 +129,8 @@ p {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 20px;
     justify-items: center;
-    margin-top: 100px;
+    margin-top: 20px;
+    margin-bottom: 100px;
 }
 
 .card-wrap {
@@ -238,6 +244,7 @@ p {
         text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
     }
 
+/*button*/
 .btn {
     cursor: pointer;
     margin-top: 1.5rem;
@@ -259,6 +266,64 @@ p {
         outline: 1px dashed yellow;
         outline-offset: 3px;
     }
+
+/* Conteneur parent */
+.containerbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+
+.pulse:hover,
+.pulse:focus {
+    -webkit-animation: pulse 1s;
+    animation: pulse 1s;
+    box-shadow: 0 0 0 2em transparent;
+    transform: translateY(-0.25em);
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 var(--hover);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 var(--hover);
+    }
+}
+
+.pulse {
+    --color: #FF5C81;
+    --hover: #ff194d;
+}
+
+button {
+    color: var(--color);
+    transition: 0.25s;
+}
+
+    button:hover, button:focus {
+        border-color: var(--hover);
+        color: #fff;
+    }
+
+button {
+    background: #000842;
+    border: 2px solid;
+    font: inherit;
+    line-height: 1;
+    margin: 3em;
+    padding: 1em 5em;
+}
+
+code {
+    color: #e4cb58;
+    font: inherit;
+}
 
 .containermain {
     flex: 1;

@@ -151,9 +151,9 @@ header {
 
 /* LISTES */
 .custom-list {
-    width: 70%; /* Ajuste la largeur selon ton besoin */
-    margin: 0 auto; /* Centre horizontalement */
-    text-align: center; /* Centre le texte si nécessaire */
+    width: 70%; 
+    margin: 0 auto;
+    text-align: center;
 }
 
 .custom-list .list-group-item {
@@ -487,7 +487,7 @@ header {
 }
 
     .btn-orange:hover {
-        background-color: #e68900;
+        background-color: #ff194d;
         cursor: pointer;
     }
 
