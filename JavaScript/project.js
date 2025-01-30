@@ -11,7 +11,6 @@
         <div class="card-info">
           <slot name="header"></slot>
           <slot name="content"></slot>
-          <!-- Utilisation de la prop href ici -->
           <a :href="href" class="btn">Voir le projet</a>
         </div>
       </div>

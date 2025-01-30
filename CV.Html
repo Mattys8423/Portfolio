@@ -8,6 +8,8 @@
     <title>Curriculum Vitae</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="css/cv.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -25,20 +27,20 @@
 
     <div class="containermain">
         <!-- Conteneur pour l'image et le texte -->
-        <div class="d-flex justify-content-center align-items-center flex-wrap" style="margin-top: 80px;">
-            <!-- Texte à gauche -->
-            <div style="max-width: 300px; text-align: center;">
-                <img src="Assets/me.jpg" class="rounded" alt="" style="max-width: 100%; margin-top: 20px;">
+        <div class="d-flex justify-content-center align-items-center flex-wrap" style="margin-top: 1%;">
+            <!-- Image à gauche -->
+            <div style="max-width: 200px; text-align: center;">
+                <img src="Assets/me.jpg" class="rounded" alt="" style="max-width: 100%; margin-top: 1%;">
             </div>
 
-            <!-- Image à droite -->
-            <div style="max-width: 50%; text-align: center; margin-left: 20px;">
+            <!-- Texte à droite -->
+            <div style="max-width: 50%; text-align: center; margin-left: 5%;">
                 <div class="underline">
                     <h1>
                         Mattys Chretien
                     </h1>
                 </div>
-                <div class="card" style="width: 100%; margin-top: 20px;">
+                <div class="card" style="width: 100%; margin-top: 1%">
                     <div class="card-header">
                         mattyschretien@gaming.tech
                         <br>
@@ -111,40 +113,60 @@
         </div>
 
         <!-- Third Part with professional experience -->
-        <div class="d-flex justify-content-center flex-wrap">
-            <div class="card" style="width: 100rem;">
-                <div class="card-header">
-                    2015 - 2019 (Andilly, France)
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
-                        <div class="bold">
-                            Brevet
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        Etablissement scolaire Bury Rosaire
+        <section class="timeline">
+            <div class="container">
+
+                <!--     ITEM 1  -->
+                <div class="timeline-item">
+                    <div class="timeline-img"></div>
+                    <div class="timeline-content js--fadeInLeft">
+                        <h4>Brevet</h4>
+                        <h6>2015 - 2019 (Andilly, France)</h6>
                         <br>
-                        Brevet obtenu avec mention après 4 ans de collège dans Etablissement scolaire Bury Rosaire
-                    </li>
-                </ul>
-                <div class="card-header">
-                    2019 - 2022 (Andilly, France)
+                        <p>
+                            Etablissement scolaire Bury Rosaire
+                            <br>
+                            <br>
+                            Brevet obtenu avec mention après 4 ans de collège dans Etablissement scolaire Bury Rosaire
+                        </p>
+                    </div>
                 </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
-                        <div class="bold">
-                            BAC
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        Etablissement scolaire Bury Rosaire
+
+                <!--     ITEM 2  -->
+                <div class="timeline-item">
+                    <div class="timeline-img"></div>
+                    <div class="timeline-content js--fadeInRight">
+                        <h4>Bac</h4>
+                        <h6>2019 - 2022 (Andilly, France)</h6>
                         <br>
-                        Bac obtenu après 3 années dans le lycée de Etablissement scolaire Bury Rosaire
-                    </li>
-                </ul>
+                        <p>                        <p>
+                            Etablissement scolaire Bury Rosaire
+                            <br>
+                            <br>
+                            Bac obtenu après 3 années dans le lycée de Etablissement scolaire Bury Rosaire
+                        </p></p>
+                    </div>
+                </div>
+
+                <!--     ITEM 1  -->
+                <div class="timeline-item">
+                    <div class="timeline-img"></div>
+                    <div class="timeline-content js--fadeInLeft">
+                        <h4>Bachelor Informatique</h4>
+                        <h6>2022 - 2025 (La Défense, France)</h6>
+                        <br>
+                        <p>
+                            Quest Education (Gaming Campus)
+                            <br>
+                            <br>
+                            Bachelor Informatique obtenu dans la filière jeu vidéo GTECH.
+                        </p>
+                    </div>
+                </div>
+
             </div>
-        </div>
+        </section>
+
 
         <!-- Title of the Fourth part -->
         <div class="title_2">
@@ -154,17 +176,16 @@
         </div>
 
         <!-- Représentation de mes compétences -->
-        <div class="card special" style="width: 100%;">
-            <ul class="list-group list-group-flush custom-list">
-                <li class="list-group-item">C++</li>
-                <li class="list-group-item">C#</li>
-                <li class="list-group-item">Unity</li>
-                <li class="list-group-item">Unreal Engine</li>
-                <li class="list-group-item">HTML</li>
-                <li class="list-group-item">CSS</li>
-                <li class="list-group-item">Autonomie</li>
-                <li class="list-group-item">Travail d’équipe</li>
-            </ul>
+        <div class="bubble-container">
+            <a class="bubble" href="#"><img src="Assets/bubble/c++.png" /></a>
+            <a class="bubble" href="#"><img src="Assets/bubble/cs.png" /></a>
+            <a class="bubble" href="#"><img src="Assets/bubble/unity.png" /></a>
+            <a class="bubble" href="#"><img src="Assets/bubble/unreal-engine.png" /></a>
+            <a class="bubble" href="#"><img src="Assets/bubble/html.png" /></a>
+            <a class="bubble" href="#"><img src="Assets/bubble/css.png" /></a>
+            <a class="bubble" href="#"><img src="Assets/bubble/js.png" /></a>
+            <a class="bubble" href="#"><img src="Assets/bubble/autonomie.png" /></a>
+            <a class="bubble" href="#"><img src="Assets/bubble/teamwork.png" /></a>
         </div>
 
         <!-- Title of the Fifth part -->
@@ -196,26 +217,39 @@
             </h2>
         </div>
 
-        <div class="d-flex justify-content-center flex-wrap">
             <!-- Sixth Part with professional experience -->
-            <div class="card" style="width: 100rem;">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
-                        • Programmation
-                        <br>
-                        • Mécanique
-                        <br>
-                        • Robotique
-                        <br>
-                        • Basketball
-                        <br>
-                        • Informatique
-                        <br>
-                        • Numérique
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <ul class="list-group list-group-flush custom-list">
+            <li class="list-group-item">
+                <span class="glitch" data-text="Programmation">
+                    Programmation
+                </span>
+            </li>
+            <li class="list-group-item">
+                <span class="glitch" data-text="Mécanique">
+                    Mécanique
+                </span>
+            </li>
+            <li class="list-group-item">
+                <span class="glitch" data-text="Numérique">
+                    Numérique
+                </span>
+            </li>
+            <li class="list-group-item">
+                <span class="glitch" data-text="Basketball">
+                    Basketball
+                </span>
+            </li>
+            <li class="list-group-item">
+                <span class="glitch" data-text="Escalade">
+                    Escalade
+                </span>
+            </li>
+            <li class="list-group-item">
+                <span class="glitch" data-text="Robotique">
+                    Robotique
+                </span>
+            </li>
+        </ul>
 
         <br />
 
@@ -239,8 +273,8 @@
         <p>&copy; 2025 Mon Site Web. Tous droits r&#233;serv&#233;s.</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <script src="JavaScript/menu.js"></script>
+    <script src="JavaScript/timeline.js"></script>
 </body>
 
 </html>

@@ -21,51 +21,44 @@ body {
 
 /* HEADER */
 header {
-    background-color: #333;
+    background-color: #000842;
     color: #fff;
-    padding: 20px 0;
+    padding: 15px 5%;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-}
-
-header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 1.5em;
-}
+    header h1 {
+        margin: 0;
+        font-size: 1.2em;
+    }
 
-header nav {
-    display: flex;
-    gap: 20px;
-}
+    header nav {
+        display: flex;
+        gap: 35px;
+    }
 
-header nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    margin-left: 20px
-}
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1em;
+        }
 
-header nav a:hover {
-    color: #ff9800;
-}
+            header nav a:hover, header nav a.active {
+                color: #FF5C81;
+                text-decoration: underline;
+            }
 
-header nav a.active {
-    color: #ff9800; /* Changer la couleur pour la page active */
-    text-decoration: underline; /* Ajouter un soulignement pour encore mieux la distinguer */
-}
-
-/* Bouton menu burger */
+/* MENU BURGER */
 .menu-toggle {
-    display: none; /* Masqué par défaut */
+    display: none;
     background: none;
     border: none;
     color: #fff;
@@ -73,33 +66,32 @@ header nav a.active {
     cursor: pointer;
 }
 
-/* RESPONSIVE : Active le menu burger */
 @media (max-width: 768px) {
     header nav {
-        display: none; /* Masque les liens de navigation par défaut */
+        display: none;
         flex-direction: column;
         gap: 10px;
-        background-color: #333;
+        background-color: #000842;
         position: absolute;
-        top: 50px; /* Ajuste selon la hauteur du header */
-        left: 20px; /* Les liens apparaîtront à gauche */
+        top: 50px;
+        left: 0;
+        width: 100%;
         padding: 10px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
     }
 
-    header nav.active {
-        display: flex; /* Affiche les liens quand le menu burger est actif */
-    }
+        header nav.active {
+            display: flex;
+        }
 
     .menu-toggle {
-        display: block; /* Affiche le bouton burger */
+        display: block;
     }
 }
 
-
+/* HERO */
 .hero {
-    height: 94vh;
+    height: 90vh;
     color: #fff;
     text-align: center;
     display: flex;
@@ -107,24 +99,38 @@ header nav a.active {
     align-items: center;
     flex-direction: column;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+    padding: 0 5%;
 }
 
     .hero h1 {
-        font-size: 4em;
-        margin-bottom: 20px;
+        font-size: 3.5em;
+        margin-bottom: 15px;
     }
 
     .hero p {
-        font-size: 1.5em;
-        margin-bottom: 30px;
+        font-size: 1.2em;
+        margin-bottom: 25px;
     }
 
-.containermain {
-    flex: 1;
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
 }
 
+/* CONTENU PRINCIPAL */
+.containermain {
+    flex: 1;
+    padding: 20px 5%;
+}
+
+/* FOOTER */
 footer {
-    background-color: #333;
+    background-color: #000842;
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -133,3 +139,10 @@ footer {
     footer p {
         margin: 0;
     }
+
+@media (max-width: 768px) {
+    footer {
+        padding: 15px;
+        font-size: 0.9em;
+    }
+}
