@@ -1,9 +1,15 @@
-﻿document.addEventListener("DOMContentLoaded", () => {
-    const toggleButton = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('header nav');
+﻿document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector("header nav");
 
-    // Ajoute ou enlève la classe "active" lorsque le bouton est cliqué
-    toggleButton.addEventListener('click', () => {
-        nav.classList.toggle('active');
+    menuToggle.addEventListener("click", function () {
+        nav.classList.toggle("active");
+        menuToggle.classList.toggle("active"); // Active l'animation
     });
 });
+
+
+window.addEventListener("load", function () {
+    document.getElementById("loader").style.display = "none";
+});
+

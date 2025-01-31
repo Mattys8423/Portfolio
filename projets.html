@@ -7,14 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
     <link rel="stylesheet" href="css/project.css">
+    <link rel="icon" href="Assets/portal2.png" type="image/png">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 </head>
 
 <body>
 
+    <!-- Spinner -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+
     <!-- Header (Menu de navigation) -->
     <header>
-        <button class="menu-toggle" aria-label="Menu"> ☰ </button>
+        <button class="menu-toggle" aria-label="Menu"></button>
         <nav>
             <a href="index.html">Accueil</a>
             <a href="projets.html" class="active">Mes projets</a>
@@ -34,7 +41,7 @@
                 <h1 slot="header">Death Mart</h1>
                 <p slot="content">Un petit jeu fait sur unity avec les assets du site Kenney.</p>
             </card>
-            <card data-image="Assets/carnival.png">
+            <card data-image="Assets/carnival.png" href="carnival.html">
                 <h1 slot="header">Carnival Game</h1>
                 <p slot="content">Jeu reprenant le concept d'une fête foraine fait sur Unreal Engine.</p>
             </card>
@@ -51,15 +58,14 @@
                 <p slot="content">Petit Plateformer fait en SFML.</p>
             </card>
         </div>
-    </div>
 
-
-    <div class="hero">
-        <p>Vous pouvez aussi aller voir ma page Github et ma page Itch.io :</p>
-    </div>
-    <div class="containerbutton">
-        <button class="pulse" onclick="window.open('https://github.com/Mattys8423?tab=repositories', '_blank')">Github</button>
-        <button class="pulse" onclick="window.open('https://hinokagutsuchi.itch.io', '_blank')">Itch.io</button>
+        <div class="hero">
+            <p>Vous pouvez aussi aller voir ma page Github et ma page Itch.io :</p>
+        </div>
+        <div class="buttoncontain">
+            <button class="pulse" onclick="window.open('https://github.com/Mattys8423?tab=repositories', '_blank')">Github</button>
+            <button class="pulse" onclick="window.open('https://hinokagutsuchi.itch.io', '_blank')">Itch.io</button>
+        </div>
     </div>
 
     <!-- Footer -->
