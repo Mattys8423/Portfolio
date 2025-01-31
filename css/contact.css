@@ -3,11 +3,6 @@
     src: url('../font/PressStart2P.ttf') format('truetype');
 }
 
-@font-face {
-    font-family: 'Press Start 2P';
-    src: url('../font/PressStart2P.ttf') format('truetype');
-}
-
 html, body {
     height: 100%;
     margin: 0;
@@ -91,6 +86,58 @@ header {
                 color: #FF5C81;
                 text-decoration: underline;
             }
+
+/* Sous-menu*/
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #000842;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    top: 100%;
+    left: 0;
+    width: 150px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+    .submenu.show {
+        display: block;
+    }
+
+    .submenu li {
+        padding: 10px;
+    }
+
+        .submenu li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            font-size: 0.9em;
+        }
+
+            .submenu li a:hover {
+                text-decoration: #FF5C81;
+            }
+
+.dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+    font-size: 1em;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+    .dropdown-toggle.active {
+        transform: rotate(90deg);
+    }
 
 /* MENU BURGER */
 .menu-toggle {
