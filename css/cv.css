@@ -125,12 +125,14 @@ header {
 
 .dropdown {
     position: relative;
-    display: flex;
+    display: block;
     align-items: center;
     gap: 5px;
 }
 
 .dropdown-toggle {
+    display: inline-block;
+    align-items: center;
     cursor: pointer;
     font-size: 1em;
     color: white;
