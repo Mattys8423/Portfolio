@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carnival</title>
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="icon" href="Assets/portal2.png" type="image/png">
+</head>
+
+<body>
+
+    <!-- Spinner -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header (Menu de navigation) -->
+    <header>
+        <button class="menu-toggle" aria-label="Menu"></button>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <div class="dropdown">
+                <a href="projets.html" class="active">Mes projets</a>
+                <span class="dropdown-toggle">►</span>
+                <ul class="submenu">
+                    <li><a href="dm.html">Death Mart</a></li>
+                    <li><a href="carnival.html">Carnival</a></li>
+                    <li><a href="rl.html">RCL</a></li>
+                    <li><a href="pokemon.html" class="active2">Pokemon C#</a></li>
+                    <li><a href="sfml.html">Nightmare Descent</a></li>
+                </ul>
+            </div>
+            <a href="CV.Html">Curriculum vitæ</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="containermain">
+        <main>
+            <ul class='slider'>
+                <li class='item' style="background-image: url('Assets/pokemon/menu.png')">
+                    <div class='content'>
+                        <h2 class='title'>Jeu</h2>
+                        <p class='description'>
+                            Reprend le principe des jeux pokémons, affiché sur la console.
+                            <br />
+                            Résumé : incarnes un dresseur débutant qui commence son aventure dans une petite ville. Après avoir choisi ton pseudo, tu rends visite au Professeur Pokémon, qui te propose de choisir entre trois Pokémon starters
+                        </p>
+                        <button class="pulse" onclick="window.open('https://github.com/Mattys8423/Carnival_UE5', '_blank')">Voir le Code</button>
+                    </div>
+                </li>
+                <li class='item' style="background-image: url('Assets/pokemon/city.png')">
+                    <div class='content'>
+                        <h2 class='title'>Carte du jeu</h2>
+                        <p class='description'>
+                            Le principal déroulé du jeu est dans une carte.
+                            <br />
+                            Features : Objets éparpillés, Visite des maisons/du lac, déplacement du joueur avec les flèches du clavier.
+                        </p>
+                        <button class="pulse" onclick="window.open('https://github.com/Mattys8423/Carnival_UE5', '_blank')">Voir le Code</button>
+                    </div>
+                </li>
+                <li class='item' style="background-image: url('Assets/pokemon/battle.png')">
+                    <div class='content'>
+                        <h2 class='title'>Combat</h2>
+                        <p class='description'>
+                            Comabat contre les 151 pokémons de la première génération.
+                            <br />
+                            Features : Sprite de chaque pokémon, Attaque, Changement de pokemon, Item, Fuite.
+                        </p>
+                        <button class="pulse" onclick="window.open('https://github.com/Mattys8423/Carnival_UE5', '_blank')">Voir le Code</button>
+                    </div>
+                </li>
+                <li class='item' style="background-image: url('Assets/pokemon/ufc.png')">
+                    <div class='content'>
+                        <h2 class='title'>Arène</h2>
+                        <p class='description'>
+                            Arène dans le jeu.
+                            <br />
+                            Features : Combat contre des pokémons aléatoires et boostés.
+                        </p>
+                        <button class="pulse" onclick="window.open('https://github.com/Mattys8423/Carnival_UE5', '_blank')">Voir le Code</button>
+                    </div>
+                </li>
+            </ul>
+            <nav class='nav'>
+                <button class='btn1 prev' name="arrow-back-outline"></button>
+                <button class='btn2 next' name="arrow-forward-outline"></button>
+            </nav>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Mon Site Web. Tous droits r&#233;serv&#233;s.</p>
+    </footer>
+
+    <!-- Lien vers les fichiers JS -->
+    <script src="JavaScript/slider.js"></script>
+    <script src="JavaScript/menu.js"></script>
+</body>
+
+</html>

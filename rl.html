@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carnival</title>
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="icon" href="Assets/portal2.png" type="image/png">
+</head>
+
+<body>
+
+    <!-- Spinner -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header (Menu de navigation) -->
+    <header>
+        <button class="menu-toggle" aria-label="Menu"></button>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <div class="dropdown">
+                <a href="projets.html" class="active">Mes projets</a>
+                <span class="dropdown-toggle">►</span>
+                <ul class="submenu">
+                    <li><a href="dm.html">Death Mart</a></li>
+                    <li><a href="carnival.html">Carnival</a></li>
+                    <li><a href="rl.html" class="active2">RCL</a></li>
+                    <li><a href="pokemon.html">Pokemon C#</a></li>
+                    <li><a href="sfml.html">Nightmare Descent</a></li>
+                </ul>
+            </div>
+            <a href="CV.Html">Curriculum vitæ</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="containermain">
+        <main>
+            <ul class='slider'>
+                <li class='item' style="background-image: url('Assets/rl/menu.png')">
+                    <div class='content'>
+                        <h2 class='title'>Menu</h2>
+                        <p class='description'>
+                            Menu du jeu
+                            <br />
+                            Features : Boutton Play/Options/Quit.
+                        </p>
+                        <button class="pulse" onclick="window.open('https://github.com/Mattys8423/Rocket-Champions-League', '_blank')">Voir le Code</button>
+                    </div>
+                </li>
+                <li class='item' style="background-image: url('Assets/rl/play.png')">
+                    <div class='content'>
+                        <h2 class='title'>Scène de jeu</h2>
+                        <p class='description'>
+                            Scène de jeu avec un split screen pour les deux joueurs.
+                            <br />
+                            Features : Split Screen (2 input pour les joueurs), UI avec Timer/Score et Fuel (Jetpack) de chaque joueur, Tir proche de la balle.
+                        </p>
+                        <button class="pulse" onclick="window.open('https://github.com/Mattys8423/Rocket-Champions-League', '_blank')">Voir le Code</button>
+                    </div>
+                </li>
+                <li class='item' style="background-image: url('Assets/rl/options.png')">
+                    <div class='content'>
+                        <h2 class='title'>Options</h2>
+                        <p class='description'>
+                            Options du jeu.
+                            <br />
+                            Features : Timer (3 choix), choix de la balle (3 balles).
+                        </p>
+                        <button class="pulse" onclick="window.open('https://github.com/Mattys8423/Rocket-Champions-League', '_blank')">Voir le Code</button>
+                    </div>
+                </li>
+                <li class='item' style="background-image: url('Assets/rl/pause.png')">
+                    <div class='content'>
+                        <h2 class='title'>Menu Pause</h2>
+                        <p class='description'>
+                            Pause du jeu.
+                            <br />
+                            Features : Boutons Resume/Options/Menu, Pause du timer de jeu.
+                        </p>
+                        <button class="pulse" onclick="window.open('https://github.com/Mattys8423/Rocket-Champions-League', '_blank')">Voir le Code</button>
+                    </div>
+                </li>
+                <li class='item' style="background-image: url('Assets/rl/win.png')">
+                    <div class='content'>
+                        <h2 class='title'>Menu Victoire/Défaite</h2>
+                        <p class='description'>
+                            Menu pour gérer chacun des cas victoires/défaites. 
+                            <br />
+                            Features : Boutons Rejouer/Menu.
+                        </p>
+                        <button class="pulse" onclick="window.open('https://github.com/Mattys8423/Rocket-Champions-League', '_blank')">Voir le Code</button>
+                    </div>
+                </li>
+            </ul>
+            <nav class='nav'>
+                <button class='btn1 prev' name="arrow-back-outline"></button>
+                <button class='btn2 next' name="arrow-forward-outline"></button>
+            </nav>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Mon Site Web. Tous droits r&#233;serv&#233;s.</p>
+    </footer>
+
+    <!-- Lien vers les fichiers JS -->
+    <script src="JavaScript/slider.js"></script>
+    <script src="JavaScript/menu.js"></script>
+</body>
+
+</html>

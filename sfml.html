@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carnival</title>
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="icon" href="Assets/portal2.png" type="image/png">
+</head>
+
+<body>
+
+    <!-- Spinner -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header (Menu de navigation) -->
+    <header>
+        <button class="menu-toggle" aria-label="Menu"></button>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <div class="dropdown">
+                <a href="projets.html" class="active">Mes projets</a>
+                <span class="dropdown-toggle">►</span>
+                <ul class="submenu">
+                    <li><a href="dm.html">Death Mart</a></li>
+                    <li><a href="carnival.html">Carnival</a></li>
+                    <li><a href="rl.html">RCL</a></li>
+                    <li><a href="pokemon.html">Pokemon C#</a></li>
+                    <li><a href="sfml.html" class="active2">Nightmare Descent</a></li>
+                </ul>
+            </div>
+            <a href="CV.Html">Curriculum vitæ</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="containermain">
+        <main>
+            <ul class='slider'>
+                <li class='item' style="background-image: url('Assets/carnival/chamboule_tout.png')">
+                    <div class='content'>
+                        <h2 class='title'>"Le Chamboule-Tout"</h2>
+                        <p class='description'>
+                            Attraction où l'objectif est de renverser des boîtes empilées en lançant un objet.
+                            <br />
+                            Features : Slider de force, Nombre de boîtes renversées, Nombre de balles lancées (max 3).
+                        </p>
+                        <button class="pulse" onclick="window.open('https://github.com/Mattys8423/Carnival_UE5', '_blank')">Voir le Code</button>
+                    </div>
+                </li>
+                <li class='item' style="background-image: url('Assets/carnival/bumper_car.png')">
+                    <div class='content'>
+                        <h2 class='title'>"Auto Tamponneuses"</h2>
+                        <p class='description'>
+                            Attraction où les joueurs conduisent de petites voitures électriques dans une arène fermée et tentent de se rentrer dedans pour le fun.
+                            <br />
+                            Features : Timer, Nombres de voitures éliminés (sortie du terrain).
+                        </p>
+                        <button class="pulse" onclick="window.open('https://github.com/Mattys8423/Carnival_UE5', '_blank')">Voir le Code</button>
+                    </div>
+                </li>
+                <li class='item' style="background-image: url('Assets/carnival/foot.png')">
+                    <div class='content'>
+                        <h2 class='title'>"Foot"</h2>
+                        <p class='description'>
+                            Le football, est un sport opposant deux équipes qui tentent de marquer des buts en envoyant un ballon dans le but adverse.
+                            <br />
+                            Features : Tir au contact de la balle, Nombre de buts, Reset du score.
+                        </p>
+                        <button class="pulse" onclick="window.open('https://github.com/Mattys8423/Carnival_UE5', '_blank')">Voir le Code</button>
+                    </div>
+                </li>
+                <li class='item' style="background-image: url('Assets/carnival/carnival.png')">
+                    <div class='content'>
+                        <h2 class='title'>"PNJ"</h2>
+                        <p class='description'>
+                            Personnage non joueurs, entités contrôlées par l’IA.
+                            <br />
+                            Features : Spawn et Despawn à l'entrée, Déplacement sur la carte, Arrêt devant les attractions.
+                        </p>
+                        <button class="pulse" onclick="window.open('https://github.com/Mattys8423/Carnival_UE5', '_blank')">Voir le Code</button>
+                    </div>
+                </li>
+                <li class='item' style="background-image: url('Assets/carnival/bill.png')">
+                    <div class='content'>
+                        <h2 class='title'>"Machine à Billet"</h2>
+                        <p class='description'>
+                            Machines fournissant les billets pour jouer aux attractions.
+                            <br />
+                            Features : Fenêtre modale, Ajout du nombre de billet.
+                        </p>
+                        <button class="pulse" onclick="window.open('https://github.com/Mattys8423/Carnival_UE5', '_blank')">Voir le Code</button>
+                    </div>
+                </li>
+            </ul>
+            <nav class='nav'>
+                <button class='btn1 prev' name="arrow-back-outline"></button>
+                <button class='btn2 next' name="arrow-forward-outline"></button>
+            </nav>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Mon Site Web. Tous droits r&#233;serv&#233;s.</p>
+    </footer>
+
+    <!-- Lien vers les fichiers JS -->
+    <script src="JavaScript/slider.js"></script>
+    <script src="JavaScript/menu.js"></script>
+</body>
+
+</html>
