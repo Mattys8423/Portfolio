@@ -419,20 +419,20 @@ main {
   }
 
   .item {
-    width: 70px;
-    height: 120px;
+    width: 55px;
+    height: 90px;
 
     &:nth-child(3) {
       left: 50%;
     }
     &:nth-child(4) {
-      left: calc(50% + 75px);
+      left: calc(50% + 60px);
     }
     &:nth-child(5) {
-      left: calc(50% + 150px);
+      left: calc(50% + 120px);
     }
     &:nth-child(6) {
-      left: calc(50% + 220px);
+      left: calc(50% + 160px);
       opacity: 0;
     }
   }
