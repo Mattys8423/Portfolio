@@ -386,20 +386,20 @@ main {
   }
 
   .item {
-    width: 160px;
-    height: 270px;
+    width: 110px;
+    height: 200px;
 
     &:nth-child(3) {
       left: 50%;
     }
     &:nth-child(4) {
-      left: calc(50% + 170px);
+      left: calc(50% + 115px);
     }
     &:nth-child(5) {
-      left: calc(50% + 340px);
+      left: calc(50% + 230px);
     }
     &:nth-child(6) {
-      left: calc(50% + 510px);
+      left: calc(50% + 460px);
       opacity: 0;
     }
   }
@@ -419,20 +419,20 @@ main {
   }
 
   .item {
-    width: 130px;
-    height: 220px;
+    width: 70px;
+    height: 120px;
 
     &:nth-child(3) {
       left: 50%;
     }
     &:nth-child(4) {
-      left: calc(50% + 140px);
+      left: calc(50% + 75px);
     }
     &:nth-child(5) {
-      left: calc(50% + 280px);
+      left: calc(50% + 150px);
     }
     &:nth-child(6) {
-      left: calc(50% + 420px);
+      left: calc(50% + 220px);
       opacity: 0;
     }
   }
