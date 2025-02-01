@@ -716,6 +716,11 @@ section {
     }
 
 @media screen and (max-width: 768px) {
+
+    .timeline {
+        overflow-x: hidden;
+    }
+
     .timeline::before {
         left: 50px;
     }
