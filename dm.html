@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Death Mart</title>
+    <link rel="stylesheet" href="css/game_video.css">
+    <link rel="icon" href="Assets/portal2.png" type="image/png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Spinner -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header (Menu de navigation) -->
+    <header>
+        <button class="menu-toggle" aria-label="Menu"></button>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <div class="dropdown">
+                <a href="projets.html" class="active">Mes projets</a>
+                <span class="dropdown-toggle">►</span>
+                <ul class="submenu">
+                    <li><a href="dm.html">Death Mart</a></li>
+                    <li><a href="carnival.html" class="active2">Carnival</a></li>
+                    <li><a href="rl.html">RCL</a></li>
+                    <li><a href="pokemon.html">Pokemon C#</a></li>
+                    <li><a href="sfml.html">Nightmare Descent</a></li>
+                </ul>
+            </div>
+            <a href="CV.Html">Curriculum vitæ</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="containermain">
+
+        <!-- Section Hero (Message de bienvenue) -->
+        <div class="hero">
+            <h2 class="divider2 line glow">Trailer du jeu</h2>
+        </div>
+
+        <!-- Video -->
+        <div class='player-container'>
+            <div class='player'>
+                <video id='video' src='video/Trailer%20du%20jeu%20Death%20Mart.mp4' autoplay playsinline></video>
+                <div class='play-btn-big'></div>
+                <div class='controls'>
+                    <div class='progress'>
+                        <div class='progress-filled'></div>
+                    </div>
+                    <div class='controls-main'>
+                        <div class='controls-left'>
+                            <div class='volume'>
+                                <div class='volume-btn loud'>
+                                    <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.75497 17.6928H2C0.89543 17.6928 0 16.7973 0 15.6928V8.30611C0 7.20152 0.895431 6.30611 2 6.30611H6.75504L13.9555 0.237289C14.6058 -0.310807 15.6 0.151473 15.6 1.00191V22.997C15.6 23.8475 14.6058 24.3098 13.9555 23.7617L6.75497 17.6928Z" transform="translate(0 0.000518799)" fill="white" />
+                                        <path id="volume-low" d="M0 9.87787C2.87188 9.87787 5.2 7.66663 5.2 4.93893C5.2 2.21124 2.87188 0 0 0V2C1.86563 2 3.2 3.41162 3.2 4.93893C3.2 6.46625 1.86563 7.87787 0 7.87787V9.87787Z" transform="translate(17.3333 7.44955)" fill="white" />
+
+                                        <path id="volume-high" d="M0 16.4631C4.78647 16.4631 8.66667 12.7777 8.66667 8.23157C8.66667 3.68539 4.78647 0 0 0V2C3.78022 2 6.66667 4.88577 6.66667 8.23157C6.66667 11.5773 3.78022 14.4631 0 14.4631V16.4631Z" transform="translate(17.3333 4.15689)" fill="white" />
+                                        <path id="volume-off" d="M1.22565 0L0 1.16412L3.06413 4.0744L0 6.98471L1.22565 8.14883L4.28978 5.23853L7.35391 8.14883L8.57956 6.98471L5.51544 4.0744L8.57956 1.16412L7.35391 0L4.28978 2.91031L1.22565 0Z" transform="translate(17.3769 8.31403)" fill="white" />
+                                    </svg>
+
+                                </div>
+                                <div class='volume-slider'>
+                                    <div class='volume-filled'></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='play-btn paused'></div>
+                        <div class="controls-right">
+                            <div class="time"><span class="time-current"></span><span class="time-total"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider -->
+            <div class="hero">
+                <h2 class="divider line glow">Images du jeu</h2>
+            </div>
+
+            <div id="slider">
+                <a href="#" class="control_prev">&#10094;</a>
+                <a href="#" class="control_next">&#10095;</a>
+                <ul>
+                    <li><img src="Assets/dm/market_place.png" alt="Image 1"></li>
+                    <li><img src="Assets/dm/enter.png" alt="Image 2"></li>
+                    <li><img src="Assets/dm/inside.png" alt="Image 3"></li>
+                    <li><img src="Assets/dm/take.png" alt="Image 4"></li>
+                    <li><img src="Assets/dm/death.png" alt="Image 5"></li>
+                </ul>
+            </div>
+
+            <div class="slider_option">
+                <input class="tgl tgl-skewed" id="checkbox" type="checkbox" checked />
+                <label class="tgl-btn" data-tg-off="Défilement Manuel" data-tg-on="Défilement Automatique" for="checkbox"></label>
+            </div>
+
+
+            <!-- Buttons -->
+            <div class="hero">
+                <h2 class="divider line glow">Liens</h2>
+            </div>
+
+            <div class="buttoncontain">
+                <button class="pulse" onclick="window.open('https://hinokagutsuchi.itch.io/death-mart', '_blank')">Voir le Jeu</button>
+                <button class="pulse" onclick="window.open('https://github.com/Mattys8423/Game_supermarket_die', '_blank')">Voir le Code</button>
+            </div>
+        </div>
+    </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2025 Mon Site Web. Tous droits r&#233;serv&#233;s.</p>
+        </footer>
+
+        <!-- Lien vers les fichiers JS -->
+        <script src="JavaScript/video.js"></script>
+        <script src="JavaScript/slider_basic.js"></script>
+        <script src="JavaScript/menu.js"></script>
+</body>
+
+</html>
