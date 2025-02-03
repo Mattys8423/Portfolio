@@ -253,7 +253,7 @@ header {
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 150%;
+    width: 80%;
     text-align: center;
 }
 
@@ -274,32 +274,6 @@ header {
         margin-left: 15px;
     }
 
-.divider2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 65%;
-    text-align: center;
-}
-
-    .divider2:before,
-    .divider2:after {
-        content: "";
-        flex-grow: 1;
-        height: 1px;
-        display: block;
-        border-radius: 5px;
-    }
-
-    .divider2:before {
-        margin-right: 15px;
-    }
-
-    .divider2:after {
-        margin-left: 15px;
-    }
-
 .glow:before,
 .glow:after {
     height: 10px;
@@ -312,6 +286,17 @@ header {
 
 .glow:after {
     background: linear-gradient(to left, blue, hotpink);
+}
+
+@media (max-width: 350px) {
+
+    .divider:before {
+        margin-right: 0px;
+    }
+
+    .divider:after {
+        margin-left: 0px;
+    }
 }
 
 
