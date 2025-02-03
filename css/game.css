@@ -173,6 +173,13 @@ header {
         transform: rotate(90deg);
     }
 
+@media (max-width: 768px) {
+
+    .submenu {
+        left: 38%;
+    }
+}
+
 /* MENU BURGER */
 .menu-toggle {
     display: none;

@@ -160,6 +160,13 @@ header {
     transition: transform 0.3s ease;
 }
 
+@media (max-width: 768px) {
+
+    .submenu {
+        left: 38%;
+    }
+}
+
     .dropdown-toggle.active {
         transform: rotate(90deg);
     }

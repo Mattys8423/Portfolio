@@ -169,6 +169,13 @@ header {
         transform: rotate(90deg);
     }
 
+@media (max-width: 768px) {
+
+    .submenu {
+        left: 38%;
+    }
+}
+
 /* MENU BURGER */
 .menu-toggle {
     display: none; /* On suppose que ce bouton est visible que sur mobile */
