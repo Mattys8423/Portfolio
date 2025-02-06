@@ -160,6 +160,10 @@ header {
     transition: transform 0.3s ease;
 }
 
+    .dropdown-toggle.active {
+        transform: rotate(90deg);
+    }
+
 @media (max-width: 768px) {
 
     .submenu {
@@ -167,13 +171,9 @@ header {
     }
 }
 
-    .dropdown-toggle.active {
-        transform: rotate(90deg);
-    }
-
 /* MENU BURGER */
 .menu-toggle {
-    display: none; /* On suppose que ce bouton est visible que sur mobile */
+    display: none;
     background: none;
     border: none;
     color: #fff;
@@ -182,40 +182,44 @@ header {
     position: relative;
     width: 40px;
     height: 40px;
-    transition: transform 0.4s ease-in-out;
+    animation: jittery 4s infinite;
 }
 
-    .menu-toggle::before {
-        content: "☰";
+    .menu-toggle:hover {
+        animation: heartbeat 0.2s 4;
+    }
+
+    .menu-toggle::before,
+    .menu-toggle::after {
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        transition: opacity 0.2s ease;
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .menu-toggle::before {
+        content: "☰";
+        opacity: 1;
+    }
+
+    .menu-toggle::after {
+        content: "✖";
+        opacity: 0;
     }
 
     .menu-toggle.active {
-        transform: rotate(180deg);
+        animation-play-state: paused;
     }
 
-        .menu-toggle.active::before {
-            opacity: 0;
-            transition-delay: 0.05s;
-        }
+    .menu-toggle.active::before {
+        opacity: 0;
+    }
 
-        .menu-toggle.active::after {
-            content: "✖";
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            opacity: 1;
-            transition: opacity 0.2s ease;
-        }
-
-        .menu-toggle.active::after {
-            opacity: 1;
-        }
+    .menu-toggle.active::after {
+        opacity: 1;
+        transition-delay: 0.1s;
+    }
 
 @media (max-width: 768px) {
     header nav {
@@ -240,9 +244,49 @@ header {
     }
 }
 
+@keyframes jittery {
+    5%, 50% {
+        transform: scale(1);
+    }
+
+    10% {
+        transform: scale(0.8);
+    }
+
+    15% {
+        transform: scale(1.25);
+    }
+
+    20% {
+        transform: scale(1.25) rotate(-10deg);
+    }
+
+    25% {
+        transform: scale(1.25) rotate(10deg);
+    }
+
+    30% {
+        transform: scale(1.25) rotate(-6deg);
+    }
+
+    35% {
+        transform: scale(1.25) rotate(4deg);
+    }
+
+    40% {
+        transform: scale(1.25) rotate(0);
+    }
+}
+
+@keyframes heartbeat {
+    50% {
+        transform: scale(1.2);
+    }
+}
+
 /* HERO */
 .hero {
-    height: 90vh;
+    height: 40vh;
     color: #fff;
     text-align: center;
     display: flex;
@@ -251,16 +295,17 @@ header {
     flex-direction: column;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
     padding: 0 5%;
+    margin-top: 80px;
 }
 
     .hero h1 {
         font-size: 3.5em;
-        margin-bottom: 15px;
+        margin-bottom: 30px;
     }
 
     .hero p {
         font-size: 1.2em;
-        margin-bottom: 25px;
+        margin-bottom: 50px;
     }
 
 @media (max-width: 768px) {
@@ -272,6 +317,252 @@ header {
         font-size: 1em;
     }
 }
+
+/*Swiper*/
+*:not(style, head),
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body article {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 150px;
+}
+
+.sectionWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.swiper {
+    width: 100%;
+    overflow: visible;
+}
+
+
+    .swiper .swiper-wrapper {
+        align-items: center;
+    }
+
+    .swiper .swiper-slide {
+        position: relative;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        background-color: rgba(102, 102, 102, 0.8);
+        border-radius: 7px;
+        padding: 10px;
+        margin: 0;
+        cursor: grab;
+        user-select: none;
+        text-wrap: pretty;
+    }
+
+        .swiper .swiper-slide::before {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 80px;
+            height: 80px;
+            border-bottom: 1px dashed white;
+            border-right: 1px solid white;
+            border-radius: 0 0 7px 0;
+            content: "";
+            transition: all 0.3s ease;
+        }
+
+        .swiper .swiper-slide::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80px;
+            height: 80px;
+            border-top: 1px solid white;
+            border-left: 1px dashed white;
+            border-radius: 7px 0 0 0;
+            content: "";
+            transition: all 0.3s ease;
+        }
+
+        .swiper .swiper-slide:hover {
+            background: linear-gradient( 135deg, #ff1e9c99, #ff1ea499, #ff1fbc99, #ff1fde99, #f620ff99, #c721ff99, #9723ff99, #6a24ff99, #4125ff99, #252aff99, #2641ff99, #2649ff99 );
+        }
+
+            .swiper .swiper-slide:hover::before,
+            .swiper .swiper-slide:hover::after {
+                width: 170px;
+                height: 170px;
+                transition: all 0.3s ease;
+            }
+
+        .swiper .swiper-slide .cardPopout {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 7px;
+            padding: 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        .swiper .swiper-slide img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 25px;
+            border-radius: 5px;
+        }
+
+        .swiper .swiper-slide h2 {
+            font-size: 200%;
+            line-height: 110%;
+            margin: 0 0 7px 0;
+            color: white;
+            font-family: "Nabla", system-ui;
+            font-variation-settings: "EDPT" 100, "EHLT" 24;
+            background-color: #111;
+            border-radius: 100%;
+        }
+
+        .swiper .swiper-slide h4 {
+            font-size: 110%;
+            line-height: 120%;
+            font-weight: 700;
+            margin: 0 0 13px 0;
+            color: #bbb;
+            font-style: italic;
+        }
+
+        .swiper .swiper-slide figcaption {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin: 0 0 20px 0;
+            padding-left: 20px;
+            border-left: 1px solid white;
+        }
+
+            .swiper .swiper-slide figcaption p {
+                color: #999;
+                margin: 0;
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+
+        .swiper .swiper-slide a {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            border-radius: 3px;
+            text-decoration: none;
+            overflow: hidden;
+            z-index: 1;
+            transition: all 0.6s ease !important;
+        }
+
+            .swiper .swiper-slide a:hover {
+                color: black;
+                transition: all 0.6s ease;
+            }
+
+            .swiper .swiper-slide a::after {
+                position: absolute;
+                right: 100%;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #2649ff;
+                content: "";
+                z-index: -1;
+                transition: all 0.6s ease;
+            }
+
+            .swiper .swiper-slide a:hover::after {
+                right: 0;
+                transition: all 0.6s ease;
+            }
+
+            .swiper .swiper-slide a svg {
+                width: 23px;
+                height: auto;
+                fill: white;
+                margin-left: 5px;
+                transition: all 0.6s ease;
+            }
+
+            .swiper .swiper-slide a:hover svg {
+                margin-left: 10px;
+                fill: black;
+                transition: all 0.6s ease;
+            }
+
+    .swiper-scrollbar {
+        --swiper-scrollbar-bottom: -20px;
+        --swiper-scrollbar-size: 10px;
+    }
+
+@media (min-width: 2000px) {
+    .swiper .swiper-slide {
+        padding: 20px;
+    }
+}
+
+@media (max-height: 550px) {
+    .swiper .swiper-slide figcaption p {
+        -webkit-line-clamp: 2;
+    }
+}
+
+@media (max-height: 490px) {
+    .swiper .swiper-slide figcaption p {
+        -webkit-line-clamp: 1;
+    }
+}
+
+@media (max-height: 460px) {
+    .swiper .swiper-slide figcaption p {
+        display: none;
+    }
+
+    .swiper .swiper-slide h4 {
+        margin: 0;
+    }
+}
+
+@media (max-height: 430px) {
+    .swiper .swiper-wrapper {
+        position: relative;
+        bottom: 6px;
+    }
+}
+
+@media (max-width: 750px) {
+    .swiper .parallax-bg {
+        width: 320%;
+    }
+}
+
 
 /* CONTENU PRINCIPAL */
 .containermain {
