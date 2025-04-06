@@ -125,7 +125,7 @@ header {
     margin: 0;
     top: 100%;
     left: 0;
-    width: 150px;
+    width: 160px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
 }
@@ -278,7 +278,7 @@ p {
     flex: 1;
     padding: 10px 5%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 20px;
     justify-items: center;
     margin-top: 20px;
