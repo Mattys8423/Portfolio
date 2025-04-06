@@ -19,16 +19,6 @@ Que vous soyez recruteur, curieux ou simplement de passage, n’hésitez pas à 
 - **CSS3**
 - **JavaScript**
 - **GitHub Pages** (pour l'hébergement)
-- Optionnel : Ajoute ici tout framework ou librairie que tu utilises (ex: React, Bootstrap...)
-
----
-
-## 📂 Structure du site
-
-- `index.html` – Page d’accueil
-- `projets.html` – Présentation de mes projets
-- `contact.html` – Formulaire ou infos pour me contacter
-- `assets/` – Images, icônes, fichiers CSS/JS
 
 ---
 
