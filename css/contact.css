@@ -1,6 +1,11 @@
 ﻿@font-face {
-    font-family: 'Press Start 2P';
-    src: url('../font/PressStart2P.ttf') format('truetype');
+    font-family: 'Montserrat';
+    src: url('../font/MontserratAlternates-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat2';
+    src: url('../font/MontserratAlternates-Light.ttf') format('truetype');
 }
 
 :root {
@@ -35,7 +40,7 @@ body {
 }
 
 body {
-    font-family: 'Press Start 2P', sans-serif;
+    font-family: Montserrat2, sans-serif;
     background: var(--bg-main);
     color: var(--text-main);
 }
@@ -92,6 +97,8 @@ body {
 
 /* HEADER */
 header {
+    min-height: 72px;
+    box-sizing: border-box;
     background-color: var(--bg-secondary);
     color: var(--text-main);
     padding: 15px 5%;
@@ -99,18 +106,19 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 72px;
     z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: Montserrat, sans-serif;
+    box-shadow: 0 4px 20px var(--shadow-soft);
     border-bottom: 1px solid var(--border-soft);
-    box-shadow: 0 8px 24px var(--shadow-soft);
 }
 
     header h1 {
         margin: 0;
-        font-size: 1rem;
+        font-size: 1.2em;
+        color: var(--text-main);
     }
 
     header nav {
@@ -122,10 +130,13 @@ header {
             color: var(--text-main);
             text-decoration: none;
             font-weight: bold;
-            font-size: 0.9rem;
+            font-size: 1em;
             position: relative;
             padding: 8px 0;
-            transition: color var(--transition-fast);
+            display: inline-flex;
+            align-items: center;
+            white-space: nowrap;
+            transition: color 0.3s ease;
         }
 
             header nav a::after {
@@ -133,25 +144,24 @@ header {
                 position: absolute;
                 left: 0;
                 bottom: -4px;
-                width: 0;
+                width: 0%;
                 height: 2px;
                 background: var(--accent-primary);
-                box-shadow: 0 0 8px var(--accent-primary);
-                transition: width var(--transition-fast);
+                transition: width 0.3s ease;
             }
 
-            header nav a:hover {
-                color: var(--accent-primary);
-            }
-
-                header nav a:hover::after,
-                header nav a.active::after {
-                    width: 100%;
-                }
-
+            header nav a:hover,
             header nav a.active {
                 color: var(--accent-primary);
             }
+
+                header nav a:hover::after {
+                    width: 100%;
+                }
+
+                header nav a.active::after {
+                    width: 100%;
+                }
 
 /* MENU BURGER */
 .menu-toggle {
@@ -164,55 +174,94 @@ header {
     position: relative;
     width: 40px;
     height: 40px;
-    transition: transform 0.4s ease-in-out;
+    animation: jittery 4s infinite;
 }
 
-    .menu-toggle::before {
-        content: "☰";
+    .menu-toggle:hover {
+        animation: heartbeat 0.2s 4;
+        color: var(--accent-primary);
+    }
+
+    .menu-toggle::before,
+    .menu-toggle::after {
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        transition: opacity 0.2s ease;
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .menu-toggle::before {
+        content: "☰";
+        opacity: 1;
+    }
+
+    .menu-toggle::after {
+        content: "✖";
+        opacity: 0;
     }
 
     .menu-toggle.active {
-        transform: rotate(180deg);
+        animation-play-state: paused;
     }
 
         .menu-toggle.active::before {
             opacity: 0;
-            transition-delay: 0.05s;
         }
 
         .menu-toggle.active::after {
-            content: "✖";
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
             opacity: 1;
-            transition: opacity 0.2s ease;
+            transition-delay: 0.1s;
         }
+
+@media (max-width: 768px) {
+    header nav {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: var(--bg-secondary);
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 90%;
+        padding: 10px 20px;
+        text-align: left;
+        border-top: 1px solid var(--border-soft);
+    }
+
+        header nav.active {
+            display: flex;
+        }
+
+    .menu-toggle {
+        display: block;
+    }
+}
 
 /* HERO */
 .hero {
-    min-height: 34vh;
+    min-height: 40vh;
     color: var(--text-main);
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    text-shadow: 0 0 12px rgba(0, 229, 255, 0.12);
-    padding: 30px 20px 10px;
+    padding: 40px 5% 60px;
+    margin-top: 0;
+    box-sizing: border-box;
 }
 
     .hero h1 {
-        font-size: 2rem;
-        margin: 0 0 15px;
-        line-height: 1.4;
-        margin-top: 100px;
+        font-size: 3.5em;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+        margin-bottom: 30px;
+        color: var(--text-secondary);
+        max-width: 800px;
     }
 
 /* CONTENT */
@@ -284,7 +333,7 @@ header {
     }
 
     .card:nth-child(1)::before {
-        background-image: url(../Assets/gmail.jpg);
+        background-image: url(../Assets/gmail.png);
     }
 
     .card:nth-child(2)::before {

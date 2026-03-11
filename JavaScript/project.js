@@ -1,22 +1,21 @@
 ﻿Vue.component('card', {
     template: `
-    <div class="card-wrap"
+    <a class="card-wrap"
+      :href="href"
       @mousemove="handleMouseMove"
       @mouseenter="handleMouseEnter"
       @mouseleave="handleMouseLeave"
       ref="card">
-      <div class="card"
-        :style="cardStyle">
+      <div class="card" :style="cardStyle">
         <div class="card-bg" :style="[cardBgTransform, cardBgImage]"></div>
         <div class="card-info">
           <slot name="header"></slot>
           <slot name="content"></slot>
-          <a :href="href" class="btn">Voir le projet</a>
         </div>
       </div>
-    </div>`,
+    </a>`,
 
-    props: ['dataImage', 'href'], // Ajout de la prop href ici
+    props: ['dataImage', 'href'],
 
     mounted() {
         this.width = this.$refs.card.offsetWidth;
@@ -61,8 +60,9 @@
 
     methods: {
         handleMouseMove(e) {
-            this.mouseX = e.pageX - this.$refs.card.offsetLeft - this.width / 2;
-            this.mouseY = e.pageY - this.$refs.card.offsetTop - this.height / 2;
+            const rect = this.$refs.card.getBoundingClientRect();
+            this.mouseX = e.clientX - rect.left - this.width / 2;
+            this.mouseY = e.clientY - rect.top - this.height / 2;
         },
         handleMouseEnter() {
             clearTimeout(this.mouseLeaveDelay);
