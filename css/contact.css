@@ -45,6 +45,61 @@ body {
     color: var(--text-main);
 }
 
+/* Cursor */
+.custom-cursor,
+.custom-cursor-ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 99999;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.custom-cursor {
+    width: 10px;
+    height: 10px;
+    background: var(--accent-primary);
+    box-shadow: 0 0 12px rgba(0, 229, 255, 0.45), 0 0 24px rgba(0, 229, 255, 0.25);
+}
+
+.custom-cursor-ring {
+    width: 34px;
+    height: 34px;
+    border: 1.5px solid rgba(0, 229, 255, 0.75);
+    box-shadow: 0 0 14px rgba(0, 229, 255, 0.18), inset 0 0 8px rgba(124, 92, 255, 0.12);
+    transition: width 0.2s ease, height 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+}
+
+    /* Etat hover sur éléments interactifs */
+    .custom-cursor-ring.is-hover {
+        width: 52px;
+        height: 52px;
+        border-color: rgba(124, 92, 255, 0.9);
+        box-shadow: 0 0 18px rgba(124, 92, 255, 0.28), 0 0 30px rgba(0, 229, 255, 0.14);
+        background: rgba(124, 92, 255, 0.06);
+    }
+
+/* Cache le curseur système sur desktop */
+html.has-custom-cursor,
+html.has-custom-cursor * {
+    cursor: none !important;
+}
+
+/* Désactivation sur mobile / tactile */
+@media (max-width: 768px), (pointer: coarse) {
+    .custom-cursor,
+    .custom-cursor-ring {
+        display: none;
+    }
+
+    html.has-custom-cursor,
+    html.has-custom-cursor * {
+        cursor: auto !important;
+    }
+}
+
 /* SPINNER */
 #loader {
     position: fixed;
