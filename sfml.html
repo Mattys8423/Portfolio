@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SFML</title>
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="icon" href="Assets/portal2.png" type="image/png">
+</head>
+
+<body>
+
+    <!-- Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-ring"></div>
+    <div class="cursor-trail"></div>
+
+    <!-- Spinner -->
+    <div id="loader">
+        <div class="spinner-double-section-in"></div>
+    </div>
+
+    <!-- Header (Menu de navigation) -->
+    <header>
+        <button class="menu-toggle" aria-label="Menu"></button>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="projets.html" class="active">Mes projets</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="containermain">
+        <main>
+            <ul class='slider'>
+                <li class='item' style="background-image: url('Assets/sfml/end.png')">
+                    <div class='content'>
+                        <h2 class='title'>Fin du jeu</h2>
+                        <p class='description'>
+                            Fin du jeu, avec une animation de porte qui s'ouvre, une UI pour indiquer la fin et une touche a presser.
+                        </p>
+                        <button class="pulse" onclick="window.open('https://github.com/Mattys8423/SFML_Game_Nightmare_Descent', '_blank')">Voir le Code</button>
+                    </div>
+                </li>
+                <li class='item' style="background-image: url('Assets/sfml/menu.png')">
+                    <div class='content'>
+                        <h2 class='title'>Menu</h2>
+                        <p class='description'>
+                            Menu du jeu avec trois boutons : Jouer, Options et quitter, et un logo fait par une IA.
+                        </p>
+                        <button class="pulse" onclick="window.open('https://github.com/Mattys8423/SFML_Game_Nightmare_Descent', '_blank')">Voir le Code</button>
+                    </div>
+                </li>
+                <li class='item' style="background-image: url('Assets/sfml/start.png')">
+                    <div class='content'>
+                        <h2 class='title'>Début du jeu</h2>
+                        <p class='description'>
+                            Début du jeu avec une UI pour indiquer au joueur comment jouer.
+                            <br />
+                            le joueur a six animation: Idle, Walk, Jump, Hit, Attack, Death, et une barre de vie visible en bas a gauche.
+                            Il y a aussi un timer et un score affichés en haut de la fenêtre.
+                        </p>
+                        <button class="pulse" onclick="window.open('https://github.com/Mattys8423/SFML_Game_Nightmare_Descent', '_blank')">Voir le Code</button>
+                    </div>
+                </li>
+                <li class='item' style="background-image: url('Assets/sfml/enemy.png')">
+                    <div class='content'>
+                        <h2 class='title'>Ennemy</h2>
+                        <p class='description'>
+                            Il y a trois types d'ennemi dans le jeu: sorcier (range), slime (cac) et le boss. Ils ont tous un pattern prédéfini.
+                        </p>
+                        <button class="pulse" onclick="window.open('https://github.com/Mattys8423/SFML_Game_Nightmare_Descent', '_blank')">Voir le Code</button>
+                    </div>
+                </li>
+            </ul>
+            <nav class='nav'>
+                <button class='btn1 prev' name="arrow-back-outline"></button>
+                <button class='btn2 next' name="arrow-forward-outline"></button>
+            </nav>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Mon Site Web. Tous droits r&#233;serv&#233;s.</p>
+    </footer>
+
+    <!-- Lien vers les fichiers JS -->
+    <script src="JavaScript/slider.js"></script>
+    <script src="JavaScript/cursor.js"></script>
+    <script src="JavaScript/menu.js"></script>
+</body>
+
+</html>
